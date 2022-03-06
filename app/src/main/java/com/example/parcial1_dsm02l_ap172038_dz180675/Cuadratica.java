@@ -2,6 +2,7 @@ package com.example.parcial1_dsm02l_ap172038_dz180675;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,7 +12,7 @@ import android.widget.Button;
 public class Cuadratica extends AppCompatActivity {
 
     //Declaración de Variables:
-    Button Calcular;
+    Button Calcular,Regresar;
     EditText A, B, C;
     TextView x1, x2, msg;
 
@@ -21,6 +22,7 @@ public class Cuadratica extends AppCompatActivity {
         setContentView(R.layout.activity_cuadratica);
 
         Calcular = (Button) findViewById(R.id.btnCalcular);
+        Regresar=(Button) findViewById(R.id.btnRegresar);
         A = (EditText) findViewById(R.id.txtA);
         B = (EditText) findViewById(R.id.txtB);
         C = (EditText) findViewById(R.id.txtC);
@@ -49,7 +51,13 @@ public class Cuadratica extends AppCompatActivity {
             else{
                 msg.setText("La solución es con números imaginarios");
             }
+        // hay que validar cuando se toque el boton le diga que ingrese los numeros
 
         });
+
+        Regresar.setOnClickListener((view -> {
+            Intent intent = new Intent(this, MenuPrincipal.class);
+            startActivity(intent);
+        }));
     }
 }

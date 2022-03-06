@@ -4,51 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPrincipal">
+    tools:context=".Comisiones">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
-            android:id="@+id/txtUsuario"
+            android:id="@+id/txtimagen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="205dp"
-            tools:layout_editor_absoluteY="61dp"
-            android:layout_marginTop="75dp"
+            android:text="imagen"
             android:layout_gravity="center_horizontal"
-            android:text="Bienvenido"/>
+            android:layout_marginTop="175dp" />
 
-        <Button
-            android:id="@+id/btnEjercicio1"
+        <TextView
+            android:id="@+id/campoNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:text="Ficha de Vendedor"
-            tools:layout_editor_absoluteX="111dp"
-            tools:layout_editor_absoluteY="215dp"
-            android:layout_gravity="center"
-            android:onClick="onClick"/>
+            android:text="Nombre"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="210dp" />
 
-        <Button
-            android:id="@+id/btnEjercicio2"
+        <TextView
+            android:id="@+id/campoCodigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ecuación Cuadrática"
-            tools:layout_editor_absoluteX="99dp"
-            tools:layout_editor_absoluteY="313dp"
-            android:layout_gravity="center"
-            android:onClick="onClick"/>
+            android:text="Codigo"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="245dp" />
+
+        <TextView
+            android:id="@+id/campoMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mes"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="280dp" />
+
+        <TextView
+            android:id="@+id/campoTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="315dp" />
 
         <Button
             android:id="@+id/btnRegresar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
             android:text="Regresar"
-            tools:layout_editor_absoluteX="267dp"
-            tools:layout_editor_absoluteY="585dp"
             android:layout_gravity="center|bottom"
+            android:layout_marginBottom="100dp"
             android:onClick="onClick"/>
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

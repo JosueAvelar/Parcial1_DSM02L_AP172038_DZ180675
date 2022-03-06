@@ -5,5 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Vendedor">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido al Ejercicio 1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Nombre"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="75dp"/>
+
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Codigo de empleado"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="120dp"/>
+
+        <EditText
+            android:id="@+id/txtVentas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Total de ventas "
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="165dp" />
+
+        <EditText
+            android:id="@+id/txtMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Mes de ventas"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="210dp"/>
+
+        <EditText
+            android:id="@+id/txtfoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Foto xd"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="255dp" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="200dp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="100dp"
+            android:onClick="onClick"/>
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

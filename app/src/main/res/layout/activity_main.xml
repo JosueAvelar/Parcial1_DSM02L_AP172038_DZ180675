@@ -38,14 +38,15 @@
             />
 
         <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|left"
-        android:layout_marginTop="68dp"
-        android:text="Guardar"
-        app:layout_constraintTop_toBottomOf="@+id/btnAvanzar"
-        tools:layout_editor_absoluteX="61dp" />
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginTop="68dp"
+            android:onClick="onClick"
+            android:text="Guardar"
+            app:layout_constraintTop_toBottomOf="@+id/btnAvanzar"
+            tools:layout_editor_absoluteX="61dp" />
 
         <Button
         android:id="@+id/btnAvanzar"
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Avazar"
+        android:onClick="onClick"
         app:layout_constraintTop_toBottomOf="@+id/campoPassword"
         tools:layout_editor_absoluteX="221dp"
         android:layout_gravity="center|right"/>
@@ -62,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Salir"
+            android:onClick="onClick"
             tools:layout_editor_absoluteX="301dp"
             tools:layout_editor_absoluteY="613dp"
             android:layout_gravity="center_vertical|bottom|right"/>

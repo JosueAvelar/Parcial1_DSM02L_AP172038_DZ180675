@@ -26,7 +26,13 @@
             android:layout_marginBottom="200dp"
             android:ems="10"
             android:hint="Valor de A"
+<<<<<<< Updated upstream
             android:inputType="textPersonName" />
+=======
+            android:inputType="numberSigned|numberDecimal"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="128dp" />
+>>>>>>> Stashed changes
 
         <EditText
             android:id="@+id/txtB"
@@ -36,7 +42,13 @@
             android:layout_marginBottom="150dp"
             android:ems="10"
             android:hint="Valor de B"
+<<<<<<< Updated upstream
             android:inputType="textPersonName" />
+=======
+            android:inputType="none|numberSigned|numberDecimal"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="213dp" />
+>>>>>>> Stashed changes
 
         <EditText
             android:id="@+id/txtC"
@@ -46,7 +58,13 @@
             android:layout_marginBottom="100dp"
             android:ems="10"
             android:hint="Valor de C"
+<<<<<<< Updated upstream
             android:inputType="textPersonName" />
+=======
+            android:inputType="numberSigned|numberDecimal"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="304dp" />
+>>>>>>> Stashed changes
 
         <TextView
             android:id="@+id/txtX"

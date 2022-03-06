@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Parcial1_DSM02L_AP172038_DZ180675">
         <activity
+            android:name=".Cuadratica"
+            android:exported="false" />
+        <activity
+            android:name=".Vendedor"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

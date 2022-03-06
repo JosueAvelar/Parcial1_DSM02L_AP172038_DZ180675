@@ -5,54 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
 
-    <EditText
-        android:id="@+id/campoPassword"
-        android:layout_width="240dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="348dp"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnSalir"
-        tools:layout_editor_absoluteX="61dp" />
+        <EditText
+            android:id="@+id/campoUsuario"
+            android:layout_width="240dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="175dp"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:text="Usuario"
+            app:layout_constraintBottom_toTopOf="@+id/campoPassword"
+            tools:layout_editor_absoluteX="61dp" />
 
-    <Button
+        <EditText
+            android:id="@+id/campoPassword"
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:text="Password"
+            app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
+            tools:layout_editor_absoluteX="61dp"
+            />
+
+        <Button
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
         android:layout_marginTop="68dp"
         android:text="Guardar"
-        app:layout_constraintTop_toBottomOf="@+id/campoPassword"
+        app:layout_constraintTop_toBottomOf="@+id/btnAvanzar"
         tools:layout_editor_absoluteX="61dp" />
 
-    <Button
+        <Button
         android:id="@+id/btnAvanzar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Avazar"
         app:layout_constraintTop_toBottomOf="@+id/campoPassword"
-        tools:layout_editor_absoluteX="221dp" />
+        tools:layout_editor_absoluteX="221dp"
+        android:layout_gravity="center|right"/>
 
-    <EditText
-        android:id="@+id/campoUsuario"
-        android:layout_width="240dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
-        android:text="Usuario"
-        app:layout_constraintBottom_toTopOf="@+id/campoPassword"
-        tools:layout_editor_absoluteX="61dp" />
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            tools:layout_editor_absoluteX="301dp"
+            tools:layout_editor_absoluteY="613dp"
+            android:layout_gravity="center_vertical|bottom|right"/>
 
-    <Button
-        android:id="@+id/btnSalir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Salir"
-        tools:layout_editor_absoluteX="301dp"
-        tools:layout_editor_absoluteY="613dp" />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

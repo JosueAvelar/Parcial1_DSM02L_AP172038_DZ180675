@@ -19,7 +19,6 @@
             android:ems="10"
             android:hint="Usuario"
             android:inputType="textPersonName"
-            android:text="Usuario"
             app:layout_constraintBottom_toTopOf="@+id/campoPassword" />
 
         <EditText
@@ -31,7 +30,6 @@
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:text="Password"
             app:layout_constraintBottom_toTopOf="@+id/btnGuardar"/>
 
         <Button

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.btnGuardar:
                 guardarPreferencias();
+
                 break;
             case R.id.btnAvanzar:
                 Intent intent = new Intent(this, MenuPrincipal.class);

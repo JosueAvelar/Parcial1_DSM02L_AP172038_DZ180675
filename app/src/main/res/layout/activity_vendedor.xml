@@ -26,37 +26,41 @@
             android:layout_marginTop="75dp"
             android:ems="10"
             android:hint="Nombre"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:onClick="Update" />
 
         <EditText
             android:id="@+id/txtCodigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="Codigo de empleado"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="120dp"/>
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:hint="Codigo de empleado"
+            android:inputType="number"
+            android:onClick="Update" />
 
         <EditText
             android:id="@+id/txtVentas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="Total de ventas "
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="165dp" />
+            android:layout_marginTop="165dp"
+            android:ems="10"
+            android:hint="Total de ventas "
+            android:inputType="number"
+            android:onClick="Update" />
 
         <EditText
             android:id="@+id/txtMes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="Mes de ventas"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="210dp"/>
+            android:layout_marginTop="210dp"
+            android:ems="10"
+            android:hint="Mes de ventas"
+            android:inputType="number"
+            android:onClick="Update" />
 
         <ImageView
             android:id="@+id/foto"

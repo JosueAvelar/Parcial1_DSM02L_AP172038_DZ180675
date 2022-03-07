@@ -34,10 +34,12 @@ public class Vendedor extends AppCompatActivity {
 
     public boolean Update(View view){
         Boolean x=true ;
+
         String c1= txtNombre.getText().toString();
         String c2= txtCodigo.getText().toString();
         String c3= txtVentas.getText().toString();
         String c4= txtMes.getText().toString();
+
         if (c1.isEmpty()){
             txtNombre.setError("Este campo no puede quedar vacio");
             x=false;

@@ -52,7 +52,9 @@ public class Vendedor extends AppCompatActivity {
             x=false;
         }else{
             Imagen();
+            x=false;
         }
+        return x;
     }
 
     public void  calcularComisiones(View view){

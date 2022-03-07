@@ -22,42 +22,39 @@ public class Cuadratica extends AppCompatActivity {
         setContentView(R.layout.activity_cuadratica);
 
         Calcular = (Button) findViewById(R.id.btnCalcular);
-        Regresar=(Button) findViewById(R.id.btnRegresar);
+        Regresar = (Button) findViewById(R.id.btnRegresar);
         A = (EditText) findViewById(R.id.txtA);
         B = (EditText) findViewById(R.id.txtB);
         C = (EditText) findViewById(R.id.txtC);
         x1 = (TextView) findViewById(R.id.txtX);
         x2 = (TextView) findViewById(R.id.txtY);
         msg = (TextView) findViewById(R.id.txtmsg);
+    }
 
-        Calcular.setOnClickListener((view) -> {
-            //Conversión de Datos:
-            double a = Double.parseDouble(A.getText().toString());
-            double b = Double.parseDouble(B.getText().toString());
-            double c = Double.parseDouble(C.getText().toString());
+    public void CalcularEc(View view){
+        //Conversión de Datos:
+        double a = Double.parseDouble(A.getText().toString());
+        double b = Double.parseDouble(B.getText().toString());
+        double c = Double.parseDouble(C.getText().toString());
+        //Calculo del Discriminante:
+        double D = ((b*b) - (4*a*c));
+        //Raices imaginarias:
+        if (D>0) {
             //Solución de la Ecuación:
-            double X1 = (-b + (Math.sqrt(Math.pow(b, 2) - (4*a*c))))/2*a;
-            double X2 = (-b - (Math.sqrt(Math.pow(b, 2) - (4*a*c))))/2*a;
-            //Calculo del Discriminante:
-            double D = Math.pow(b, 2) - (4*a*c);
+            double X1 = (-b + (Math.sqrt(D)))/(2*a);
+            double X2 = (-b - (Math.sqrt(D)))/(2*a);
+            msg.setText("Tienes una solución con números reales");
             //Resultados:
-
             x1.setText("El valor de la primera raíz es: " + X1);
             x2.setText("El valor de la segunda raíz es: " + X2);
-            //Raices imaginarias:
-            if (D>0) {
-                msg.setText("Tienes una solución con números reales");
-            }
-            else{
-                msg.setText("La solución es con números imaginarios");
-            }
-        // hay que validar cuando se toque el boton le diga que ingrese los numeros
+        }
+        else{
+            msg.setText("La solución es con números imaginarios. No existen soluciones reales.");
+        }
+    }
 
-        });
-
-        Regresar.setOnClickListener((view -> {
-            Intent intent = new Intent(this, MenuPrincipal.class);
-            startActivity(intent);
-        }));
+    public void Regresar(){
+        Intent intent = new Intent(this, MenuPrincipal.class);
+        startActivity(intent);
     }
 }

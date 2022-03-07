@@ -71,10 +71,10 @@
             android:id="@+id/btnCalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular"
             android:layout_gravity="center|bottom"
             android:layout_marginBottom="200dp"
-            android:onClick="onClick"/>
+            android:onClick="calcularComisiones"
+            android:text="Calcular" />
 
         <Button
             android:id="@+id/btnRegresar"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:layout_marginBottom="100dp"
-            android:onClick="onClick"
+            android:onClick="Regresar"
             android:text="Regresar" />
 
 

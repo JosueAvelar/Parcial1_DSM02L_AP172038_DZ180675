@@ -33,7 +33,7 @@ public class Comisiones extends AppCompatActivity {
         String comision=bundle.getString("txtComisiones");
 
 
-       txtNombre.setText(nombre);
+        txtNombre.setText(nombre);
         txtCodigo.setText(codigo);
         txtVentas.setText(ventas);
         txtComisiones.setText(comision);

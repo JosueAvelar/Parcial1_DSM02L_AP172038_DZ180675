@@ -1,8 +1,10 @@
 package com.example.parcial1_dsm02l_ap172038_dz180675;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -52,8 +54,8 @@ public class Vendedor extends AppCompatActivity {
             Imagen();
         }
     }
-    
-    public void  calcularComision(View view){
+
+    public void  calcularComisiones(View view){
         String comision=txtVentas.getText().toString();
         int comi=Integer.parseInt(comision);
         if(comi < 500){
@@ -94,6 +96,14 @@ public class Vendedor extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         intent.setType("image/");
         startActivityForResult(intent.createChooser(intent,"seleccione la aplicacion"),10);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            Uri path=data.getData();
+            foto.setImageURI(path);
+        }
     }
     public void Regresar(View view){
         Intent intent2 = new Intent(this, MenuPrincipal.class);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,6 +29,30 @@ public class Vendedor extends AppCompatActivity {
         txtVentas=findViewById(R.id.txtVentas);
         txtMes=findViewById(R.id.txtMes);
     }
+
+    public boolean Update(View view){
+        Boolean x=true ;
+        String c1= txtNombre.getText().toString();
+        String c2= txtCodigo.getText().toString();
+        String c3= txtVentas.getText().toString();
+        String c4= txtMes.getText().toString();
+        if (c1.isEmpty()){
+            txtNombre.setError("Este campo no puede quedar vacio");
+            x=false;
+        }else if(c2.isEmpty()){
+            txtCodigo.setError("Este campo no puede quedar vacio");
+            x=false;
+        }else if(c3.isEmpty()){
+            txtVentas.setError("Este campo no puede quedar vacio");
+            x=false;
+        }else if(c4.isEmpty()){
+            txtMes.setError("Este campo no puede quedar vacio");
+            x=false;
+        }else{
+            Imagen();
+        }
+    }
+    
     public void  calcularComision(View view){
         String comision=txtVentas.getText().toString();
         int comi=Integer.parseInt(comision);
@@ -36,38 +61,42 @@ public class Vendedor extends AppCompatActivity {
             comitot = 0;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 500 || comi < 1000){
+        }else if(comi == 500 && comi < 1000){
             double comitot = comi * 0.05;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 1000 || comi < 2000){
+        }else if(comi == 1000 && comi < 2000){
             double comitot = comi * 0.10;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 2000 || comi < 3000){
+        }else if(comi == 2000 && comi < 3000){
             double comitot = comi * 0.15;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 3000 || comi < 4000){
+        }else if(comi == 3000 && comi < 4000){
             double comitot = comi * 0.20;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi > 4000){
+        }else if(comi >= 4000){
             double comitot = comi * 0.30;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
         }
+        Intent i = new Intent(this,Comisiones.class);
+        i.putExtra("txtNombre",txtNombre.getText().toString());
+        i.putExtra("txtCodigo",txtCodigo.getText().toString());
+        i.putExtra("txtVentas",txtVentas.getText().toString());
+        i.putExtra("TotalComision",txtComisiones.getText().toString());
+        startActivity(i);
+
     }
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnCalcular:
-                Intent intent = new Intent(this, Comisiones.class);
-                startActivity(intent);
-                break;
-            case R.id.btnRegresar:
-                Intent intent2 = new Intent(this, MenuPrincipal.class);
-                startActivity(intent2);
-                break;
-        }
+    public void Imagen(){
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        intent.setType("image/");
+        startActivityForResult(intent.createChooser(intent,"seleccione la aplicacion"),10);
+    }
+    public void Regresar(View view){
+        Intent intent2 = new Intent(this, MenuPrincipal.class);
+        startActivity(intent2);
     }
 }

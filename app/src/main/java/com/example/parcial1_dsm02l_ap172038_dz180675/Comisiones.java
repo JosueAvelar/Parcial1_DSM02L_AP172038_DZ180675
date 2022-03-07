@@ -10,20 +10,20 @@ import android.widget.TextView;
 
 public class Comisiones extends AppCompatActivity {
 
-    private ImageView campoImagen1;
-    private TextView campoNombre;
-    private TextView campoCodigo;
-    private TextView campoComisiones;
-    private TextView campoVentas;
+    private ImageView foto;
+    private TextView txtNombre;
+    private TextView txtCodigo;
+    private TextView txtComisiones;
+    private TextView txtVentas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comisiones);
 
-        campoNombre=(TextView) findViewById(R.id.txtNombre);
-        campoCodigo=(TextView) findViewById(R.id.txtCodigo);
-        campoVentas=(TextView) findViewById(R.id.txtVentas);
+        txtNombre=(TextView) findViewById(R.id.txtNombre);
+        txtCodigo=(TextView) findViewById(R.id.txtCodigo);
+        txtVentas=(TextView) findViewById(R.id.txtVentas);
        // campoImagen1=(ImageView) findViewById(R.id.imgPagina2); //no le he puesto el boton este de la imagen :c
 
         Bundle bundle = getIntent().getExtras();
@@ -33,10 +33,10 @@ public class Comisiones extends AppCompatActivity {
         String comision=bundle.getString("txtComisiones");
 
 
-        campoNombre.setText(nombre);
-        campoCodigo.setText(codigo);
-        campoVentas.setText(ventas);
-        campoComisiones.setText(comision);
+       txtNombre.setText(nombre);
+        txtCodigo.setText(codigo);
+        txtVentas.setText(ventas);
+        txtComisiones.setText(comision);
 
     }
     public void onClick(View view){

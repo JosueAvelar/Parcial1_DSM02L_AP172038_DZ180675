@@ -60,6 +60,8 @@ public class Vendedor extends AppCompatActivity {
     }
 
     public void  calcularComisiones(View view){
+
+
         String comision=txtVentas.getText().toString();
         int comi=Integer.parseInt(comision);
         if(comi < 500){
@@ -88,13 +90,17 @@ public class Vendedor extends AppCompatActivity {
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
         }
+
         Intent i = new Intent(this,Comisiones.class);
         i.putExtra("txtNombre",txtNombre.getText().toString());
         i.putExtra("txtCodigo",txtCodigo.getText().toString());
         i.putExtra("txtVentas",txtVentas.getText().toString());
-        i.putExtra("TotalComision",txtComisiones.getText().toString());
+        i.putExtra("TotalComisiones",txtComisiones.getText().toString());
         startActivity(i);
 
+    }
+    public void onClickFoto(View view){
+        Imagen();
     }
     public void Imagen(){
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);

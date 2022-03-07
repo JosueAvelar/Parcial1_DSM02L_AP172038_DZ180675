@@ -15,6 +15,7 @@ public class Comisiones extends AppCompatActivity {
     private TextView txtCodigo;
     private TextView txtComisiones;
     private TextView txtVentas;
+    private TextView txtMes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,22 +25,25 @@ public class Comisiones extends AppCompatActivity {
         txtNombre=(TextView) findViewById(R.id.txtNombre);
         txtCodigo=(TextView) findViewById(R.id.txtCodigo);
         txtVentas=(TextView) findViewById(R.id.txtVentas);
-       // campoImagen1=(ImageView) findViewById(R.id.imgPagina2); //no le he puesto el boton este de la imagen :c
+        txtMes=(TextView) findViewById(R.id.txtMes);
+       foto=(ImageView) findViewById(R.id.foto);
 
         Bundle bundle = getIntent().getExtras();
         String nombre=bundle.getString("txtNombre");
         String codigo=bundle.getString("txtCodigo");
         String ventas=bundle.getString("txtVentas");
+        String mes=bundle.getString("txtMes");
         String comision=bundle.getString("txtComisiones");
 
 
         txtNombre.setText(nombre);
         txtCodigo.setText(codigo);
         txtVentas.setText(ventas);
+        txtMes.setText(mes);
         txtComisiones.setText(comision);
 
     }
-    public void onClick(View view){
+    public void Regresar(View view){
         Intent intent = new Intent(this, Vendedor.class);
         startActivity(intent);
     }

@@ -53,7 +53,7 @@ public class Cuadratica extends AppCompatActivity {
         }
     }
 
-    public void Regresar(){
+    public void Regresar(View view){
         Intent intent = new Intent(this, MenuPrincipal.class);
         startActivity(intent);
     }

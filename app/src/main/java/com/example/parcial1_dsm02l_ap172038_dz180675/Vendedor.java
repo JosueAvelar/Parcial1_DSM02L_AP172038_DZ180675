@@ -61,27 +61,27 @@ public class Vendedor extends AppCompatActivity {
 
     public void  calcularComisiones(View view){
 
-
         String comision=txtVentas.getText().toString();
         int comi=Integer.parseInt(comision);
+
         if(comi < 500){
             int comitot = comi;
             comitot = 0;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 500 && comi < 1000){
+        }else if(comi >= 500 && comi < 1000){
             double comitot = comi * 0.05;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 1000 && comi < 2000){
+        }else if(comi >= 1000 && comi < 2000){
             double comitot = comi * 0.10;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 2000 && comi < 3000){
+        }else if(comi >= 2000 && comi < 3000){
             double comitot = comi * 0.15;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
-        }else if(comi == 3000 && comi < 4000){
+        }else if(comi >= 3000 && comi < 4000){
             double comitot = comi * 0.20;
             String tot=String.valueOf(comitot);
             txtComisiones.setText(tot);
@@ -91,13 +91,12 @@ public class Vendedor extends AppCompatActivity {
             txtComisiones.setText(tot);
         }
 
-        Intent i = new Intent(this,Comisiones.class);
+        Intent i = new Intent(this, Comisiones.class);
         i.putExtra("txtNombre",txtNombre.getText().toString());
         i.putExtra("txtCodigo",txtCodigo.getText().toString());
         i.putExtra("txtVentas",txtVentas.getText().toString());
         i.putExtra("TotalComisiones",txtComisiones.getText().toString());
         startActivity(i);
-
     }
     public void onClickFoto(View view){
         Imagen();

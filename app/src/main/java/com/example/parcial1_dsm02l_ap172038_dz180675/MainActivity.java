@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, MenuPrincipal.class);
                 startActivity(intent);
                 break;
+
             case R.id.btnSalir:
                 finish();
                 break;

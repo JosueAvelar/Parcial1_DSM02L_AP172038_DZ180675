@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/txtimagen"
+            android:id="@+id/foto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:srcCompat="@tools:sample/avatars"
@@ -18,7 +18,7 @@
             android:layout_marginTop="25dp"/>
 
         <TextView
-            android:id="@+id/campoNombre"
+            android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre"
@@ -26,7 +26,7 @@
             android:layout_marginTop="210dp" />
 
         <TextView
-            android:id="@+id/campoCodigo"
+            android:id="@+id/txtCodigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Codigo"
@@ -34,7 +34,7 @@
             android:layout_marginTop="245dp" />
 
         <TextView
-            android:id="@+id/campoMes"
+            android:id="@+id/txtoMes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mes"
@@ -42,10 +42,10 @@
             android:layout_marginTop="280dp" />
 
         <TextView
-            android:id="@+id/campoTotal"
+            android:id="@+id/txtVentas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
+            android:text="Total de ventas"
             android:layout_marginLeft="38dp"
             android:layout_marginTop="315dp" />
 

@@ -30,7 +30,7 @@ public class Comisiones extends AppCompatActivity {
         String nombre=bundle.getString("txtNombre");
         String codigo=bundle.getString("txtCodigo");
         String ventas=bundle.getString("txtVentas");
-        String comision=bundle.getString("textTotalComision");
+        String comision=bundle.getString("txtComisiones");
 
 
         campoNombre.setText(nombre);
